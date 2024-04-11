@@ -160,6 +160,17 @@ class Node{
 	   */
 	   public int getMax(Node root){
          //implement in here
+		if (root==null) {
+			System.out.print("Root is null: ");
+			return 0;
+		} else {
+			// traverse right recursively
+			while (root.right != null) {
+				root = root.right;
+			}
+			// Return the rightmost node
+			return root.value;
+		}
 	   }
 	   
 	   
