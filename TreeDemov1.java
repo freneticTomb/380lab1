@@ -59,7 +59,15 @@ class Node{
 	   */
 	   public void preOrderTraversal(Node root){
 		//implement in here
-		   
+		//base case
+		if (root == null) {
+			return;
+		}
+		System.out.print(root.value+" ");
+		//go left recursively
+		preOrderTraversal(root.left);
+		//go right recursively
+		preOrderTraversal(root.right);  
 	   }
 
 	   
