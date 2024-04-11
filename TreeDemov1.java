@@ -77,6 +77,16 @@ class Node{
 	   */
 	   public void inOrderTraversal(Node root){
 	      //implement in here
+		//base case
+		if (root == null) {
+			return;
+		}
+		//go left recursively
+		inOrderTraversal(root.left);
+		//process the root
+		System.out.print(root.value+" ");
+		//go righ recursively
+		inOrderTraversal(root.right);
 	   }
 	   
 	   
