@@ -138,6 +138,17 @@ class Node{
 	   */
 	   public int getMin(Node root){
          //implement in here
+		if (root == null) {
+			System.out.print( "Root is null: ");
+			return 0;
+		} else {
+			// Traverse left recursively
+			while (root.left !=null) {
+				root = root.left;
+			}
+			//Return leftmost node
+			return root.value;
+		}
 	      
 	   }
 	  
